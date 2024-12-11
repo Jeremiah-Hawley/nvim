@@ -41,6 +41,7 @@ return {
                 { name = "luasnip" },
                 { name = "buffer" },
                 { name = "path" },
+                { name = "cmp_tabnine"},
             }),
         })
 
