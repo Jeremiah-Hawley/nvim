@@ -7,6 +7,23 @@ return {
     },
     config = function()
         local treesitter = require("nvim-treesitter.configs")
+        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+        parser_config.nasm = {
+            install_info = {
+                url = "https://github.com/naclsn/tree-sitter-nasm",
+                files = { "src/parser.c" },
+                branch = "main",
+            },
+            filetype = "masm",
+        }
+
+        vim.filetype.add({
+            extension = {
+                asm = "masm",
+                masm = "masm",
+            },
+        })
 
         treesitter.setup({
             highlight = {
@@ -21,21 +38,26 @@ return {
                 "cpp",
                 "json",
                 "javascript",
-                "typescript",
+                --"typescript",
                 "tsx",
                 "yaml",
                 "html",
                 "css",
                 "markdown",
-                "markdown_inline",
+                --"markdown_inline",
                 "bash",
                 "lua",
                 "vim",
-                "dockerfile",
+                --"dockerfile",
                 "gitignore",
                 "c",
                 "rust",
-                "java",
+                --"java",
+                "nasm",
+            },
+            fold = {
+                enable = true,
+                disable = { "markdown" },
             },
             incremental_selection = {
                 enable = true,

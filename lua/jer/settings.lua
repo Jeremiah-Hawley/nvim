@@ -26,3 +26,10 @@ o.inccommand = "split"
 o.splitright = true
 o.splitbelow = true
 o.termguicolors = true
+
+o.paste = false
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    o.paste = false
+  end,
+})
