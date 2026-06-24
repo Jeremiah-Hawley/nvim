@@ -4,6 +4,7 @@
 
 local ensure_installed = {
   "cpp",
+  "python",
   "json",
   "javascript",
   -- "typescript",
@@ -27,6 +28,8 @@ local ensure_installed = {
 -- Filetypes to enable treesitter features for (highlight, indent, fold)
 local ft_list = {
   "cpp",
+  "py",
+  "python",
   "json",
   "javascript",
   "typescriptreact",
