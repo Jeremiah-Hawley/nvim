@@ -1,6 +1,6 @@
 return {
   'mawkler/modicator.nvim',
-  dependencies = "tanvirtin/monokai.nvim", -- Add your colorscheme plugin here
+  dependencies = {"tanvirtin/monokai.nvim", "https://github.com/nvim-tree/nvim-web-devicons"}, -- Add your colorscheme plugin here
   init = function()
     -- These are required for Modicator to work
     vim.o.cursorline = true
