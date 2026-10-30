@@ -23,6 +23,7 @@ local ensure_installed = {
   "rust",
   -- "java",
   "nasm",
+  "scala",
 }
 
 -- Filetypes to enable treesitter features for (highlight, indent, fold)
@@ -44,6 +45,7 @@ local ft_list = {
   "c",
   "rust",
   "masm", -- nasm, mapped via vim.filetype.add below
+  "scala",
 }
 
 return {

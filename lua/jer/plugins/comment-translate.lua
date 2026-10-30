@@ -19,7 +19,7 @@ return {
   	},
 
   	cache = {
-    	kenabled = true,
+    	enabled = true,
     	max_entries = 1000,
   	},
 

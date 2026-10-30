@@ -9,6 +9,12 @@ return {
             version = "v2.*",
             -- install jsregexp (optional!).
             build = "make install_jsregexp",
+            config = function()
+                require("luasnip").setup({ enable_autosnippets = true })
+                require("luasnip.loaders.from_lua").lazy_load({
+                    paths = vim.fn.stdpath("config") .. "/LuaSnip",
+                })
+            end,
         },
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim", -- vs-code like pictograms
@@ -41,7 +47,6 @@ return {
                 { name = "luasnip" },
                 { name = "buffer" },
                 { name = "path" },
-                { name = "cmp_tabnine"},
             }),
         })
 
